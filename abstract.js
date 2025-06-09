@@ -150,7 +150,7 @@ function animate() {
   });
 
   // Mouse-follow effect
-  shapeGroup.position.x += (targetX - shapeGroup.position.x) * 0.05;
+ // shapeGroup.position.x += (targetX - shapeGroup.position.x) * 0.05;
   // shapeGroup.position.z += (targetZ - shapeGroup.position.z) * 0.05;
 
   renderer.render(scene, camera);
