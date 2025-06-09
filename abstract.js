@@ -81,14 +81,14 @@ function createCube() {
   return new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), reflectiveMaterial);
 }
 
-function createSpiral() {
-  const curve = new THREE.CatmullRomCurve3(
-    Array.from({ length: 50 }, (_, i) =>
-      new THREE.Vector3(Math.sin(i * 0.3) * 0.5, i * 0.05, Math.cos(i * 0.3) * 0.5))
-  );
-  const geometry = new THREE.TubeGeometry(curve, 64, 0.1, 8, false);
-  return new THREE.Mesh(geometry, reflectiveMaterial);
-}
+// function createSpiral() {
+//   const curve = new THREE.CatmullRomCurve3(
+//     Array.from({ length: 50 }, (_, i) =>
+//       new THREE.Vector3(Math.sin(i * 0.3) * 0.5, i * 0.05, Math.cos(i * 0.3) * 0.5))
+//   );
+//   const geometry = new THREE.TubeGeometry(curve, 64, 0.1, 8, false);
+//   return new THREE.Mesh(geometry, reflectiveMaterial);
+// }
 
 function createTriangularPrism() {
   const shape = new THREE.Shape();
