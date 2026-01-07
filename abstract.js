@@ -1,5 +1,5 @@
-
-  import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+      
+import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/RGBELoader.js';
 
@@ -71,7 +71,7 @@ new RGBELoader()
 
 // === Material ===
 const glassMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0x0033aa,
+  color: 0x00008B,
   metalness: 0,
   roughness: 0,
 
@@ -86,7 +86,7 @@ const glassMaterial = new THREE.MeshPhysicalMaterial({
   iridescenceIOR: 1.3,
 
   attenuationDistance: 2,
-  attenuationColor: new THREE.Color(0x29a0fa),
+  attenuationColor: new THREE.Color(0x29A0FA),
 
   specularIntensity: 1,
 });
@@ -174,8 +174,8 @@ function animate() {
   shapeGroup.rotation.y += 0.002;
   shapeGroup.position.y = Math.sin(time) * 0.3;
 
-  shapeGroup.position.x += (targetX - shapeGroup.position.x) * 0.05;
-  shapeGroup.position.z += (targetZ - shapeGroup.position.z) * 0.05;
+  //shapeGroup.position.x += (targetX - shapeGroup.position.x) * 0.05;
+  //shapeGroup.position.z += (targetZ - shapeGroup.position.z) * 0.05;
 
   shapeGroup.children.forEach((shape, i) => {
     shape.rotation.x += 0.01 + i * 0.002;
@@ -192,4 +192,4 @@ window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-});});
+});
