@@ -58,7 +58,7 @@ pmrem.compileEquirectangularShader();
 
 new RGBELoader()
  .load(
-    'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr',
+    'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/metro_noord_4k.hdr',
     (hdrTexture) => {
       const envMap = pmrem.fromEquirectangular(hdrTexture).texture;
 
